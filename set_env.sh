@@ -11,12 +11,12 @@
 # export URL=http://localhost:8100
 
 # my CREDENTIALS
-export POSTGRES_USERNAME=blisss
+export POSTGRES_USERNAME=blessed
 export POSTGRES_PASSWORD=Makarios25
-export POSTGRES_HOST=cdr.crulkbye7cw5.us-east-1.rds.amazonaws.com
+export POSTGRES_HOST=database-1.clqhfnhnjkkb.us-east-2.rds.amazonaws.com
 export POSTGRES_DB=postgres
-export AWS_BUCKET=arn:aws:s3:::encounterserv
-export AWS_REGION=us-east-1
+export AWS_BUCKET=microservicebuckets
+export AWS_REGION=us-east-2
 export AWS_PROFILE=default
 export JWT_SECRET=testing
 export URL=http://localhost:8100

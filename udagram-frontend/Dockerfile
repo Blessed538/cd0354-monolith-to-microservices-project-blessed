@@ -11,5 +11,9 @@ COPY . .
 RUN ionic build
 ## Run 
 FROM nginx:alpine
+
+RUN rm -rf /usr/share/nginx/html/* && rm -rf /etc/nginx/nginx.conf
+COPY ./nginx.conf /etc/nginx/nginx.conf
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
+EXPOSE 80
