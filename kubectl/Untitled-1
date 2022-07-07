@@ -1,0 +1,41 @@
+kubectl apply -f ./kubectl/aws-secret.yaml
+kubectl apply -f ./kubectl/env-secret.yaml
+kubectl apply -f ./kubectl/env-configmap.yaml
+
+if you need to delete the deployment and start all over again
+
+kubectl apply -f ./kubectl/deployment/deployment-backend-user.yaml
+kubectl apply -f ./kubectl/deployment/deployment-backend-feed.yaml
+kubectl apply -f ./kubectl/service/service-backend-user.yaml
+kubectl apply -f ./kubectl/service/service-backend-feed.yaml
+kubectl apply -f ./kubectl/deployment/deployment-frontend.yaml
+kubectl apply -f ./kubectl/service/service-frontend.yaml
+kubectl get pods
+
+kubectl apply -f ./kubectl/deployment/deployment-reverseproxy.yaml
+kubectl apply -f ./kubectl/service/service-reverseproxy.yaml
+kubectl get pods
+
+kubectl expose deployment udagram-frontend --type=LoadBalancer --name=frontend-ingress
+kubectl expose deployment udagram-reverseproxy --type=LoadBalancer --name=reversproxy-ingress
+kubectl get services
+kubectl autoscale deployment udagram-api-feed --cpu-percent=50 --min=3 --max=5
+
+kubectl get deployment metrics-server -n kube-system
+
+kubectl get hpa
+kubectl describe hpa
+kubectl get svc
+kubectl get deploymentsß
+kubectl describe services
+
+thats all, i'm done... Good night..
+Thank you so much Mr. Daniel
+Have you used docker and kubernetes beore the project?
+
+i have not used any of the services before for development. but after this our lessons i started using it.
+it makes development and deployment very easy.
+Yeah, i have alot of catching up to do. 
+Thank you so much
+you are welcome... bye
+Bye
