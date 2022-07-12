@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: blessed1dominic/udagram-frontend:v2
+        image: blessed1dominic/udagram-frontend:v6
         imagePullPolicy: Always
         ports:
         - containerPort: 80
